@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>smartService</key>
+	<string>https://randomuser.me/api?results=20&amp;seed=smartstc&amp;nat=ES</string>
+</dict>
+</plist>

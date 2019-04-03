@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  LoginSmartService
+
+  Created by administrator on 4/2/19.
+  Copyright © 2019 Esfera Estudio S de RL de CV. All rights reserved.
+*/
+////Error Codes
+//Service Manager
+"Reachability" = "No hay conexión a internet.";
+"UnreachableServer" = "Error interno, intente más tarde.";
+"ErrorData" = "Error interno, intente más tarde.";
+"ErrorUploadImage" = "Error al subir foto, intente nuevamente.";
