@@ -33,6 +33,7 @@
 		C39B5F712254A654008C4DBE /* SnackBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39B5F6F2254A654008C4DBE /* SnackBar.xib */; };
 		C39B5F732254A6A5008C4DBE /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F722254A6A5008C4DBE /* UserDataStore.swift */; };
 		C39B5F752254AE1E008C4DBE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F742254AE1E008C4DBE /* CardView.swift */; };
+		C39B5F772254CF2D008C4DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F762254CF2D008C4DBE /* UserModel.swift */; };
 		C3EEDEBD22544BBE0065BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3EEDEBC22544BBE0065BA75 /* Localizable.strings */; };
 		C3EEDEC122544C270065BA75 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EEDEC022544C270065BA75 /* Services.plist */; };
 		EFD0708F4B72711BFF67263C /* Pods_LoginSmartServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EF7ED80B9BA8A1D22FEE4E /* Pods_LoginSmartServiceTests.framework */; };
@@ -93,6 +94,7 @@
 		C39B5F6F2254A654008C4DBE /* SnackBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SnackBar.xib; path = "../../../../Downloads/WOP_iOS-Develop/wop/General/Alert/SnackBar.xib"; sourceTree = "<group>"; };
 		C39B5F722254A6A5008C4DBE /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		C39B5F742254AE1E008C4DBE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../../Downloads/WOP_iOS-Develop/wop/General/PoliCustomControllers/CardView.swift"; sourceTree = "<group>"; };
+		C39B5F762254CF2D008C4DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		C3EEDEBC22544BBE0065BA75 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C3EEDEC022544C270065BA75 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		E3DD81B9B74AB770F2CACA1C /* Pods_LoginSmartServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSmartServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +288,7 @@
 			children = (
 				C39B5F5122547B2E008C4DBE /* Interfaces.swift */,
 				C39B5F5C22548AF2008C4DBE /* SmartViewController.swift */,
+				C39B5F762254CF2D008C4DBE /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				C39B5F6522549915008C4DBE /* UserViewController.swift in Sources */,
 				C39B5F6C22549BF7008C4DBE /* ServiceManager.swift in Sources */,
 				C39B5F6922549AA0008C4DBE /* UserTableViewCell.swift in Sources */,
+				C39B5F772254CF2D008C4DBE /* UserModel.swift in Sources */,
 				C39B5F6122548F70008C4DBE /* LoginPresenter.swift in Sources */,
 				C39B5F5222547B2E008C4DBE /* Interfaces.swift in Sources */,
 				191225B7225401190016581F /* LoginViewController.swift in Sources */,

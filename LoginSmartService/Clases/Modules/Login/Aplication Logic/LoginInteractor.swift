@@ -12,6 +12,7 @@ import UIKit
 class LoginInteractor: InteractorProtocol {
     var presenter: PresenterProtocol?
      var userDataStore: UserDataStore?
+    var userData: UserModel!
     func observerError(error: String) {
         
         print(error)
@@ -25,6 +26,7 @@ class LoginInteractor: InteractorProtocol {
     func obtainUsers(data: Dictionary<String,Any>) {
         
         print(data)
+        self.userData = UserModel(data: data)
     }
     
     
