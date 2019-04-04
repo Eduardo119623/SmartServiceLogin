@@ -27,6 +27,9 @@ class LoginViewController: SmartViewController, ViewProtocol {
     @IBAction func logiinAction(_ sender: UIButton) {
         if !(self.passwordTextField.text!.isEmpty) && !(self.userTextField.text!.isEmpty) && (self.passwordTextField.text?.validatePasswordFormat())! && (self.userTextField.text?.validateUserNameFormat())! {
             self.showLoader()
+            self.userTextField.text = ""
+            self.passwordTextField.text = ""
+            self.view.endEditing(true)
             (self.presenter as! LoginPresenter).requesUsers()
         } else {
             let Alert: UIAlertController = UIAlertController(title: "Error", message: NSLocalizedString("ErrorFormat", comment: "ErrorFormat"), preferredStyle: .alert)
@@ -47,6 +50,7 @@ class LoginViewController: SmartViewController, ViewProtocol {
         self.userTextField.placeholder = NSLocalizedString("userTextFieldPlaceHolder", comment: "userTextFieldPlaceHolder")
         self.passwordTextField.placeholder = NSLocalizedString("passwordTextFieldPlaceHolder", comment: "passwordTextFieldPlaceholder")
         self.logInButton.setTitle(NSLocalizedString("logInButtonText", comment:"logInButtonTextß"), for: .normal)
+        self.navigationController?.navigationBar.isHidden = true
     }
    
     func initModule() {
@@ -67,4 +71,32 @@ class LoginViewController: SmartViewController, ViewProtocol {
         wireframe?.view = self
     }
 }
-
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //move textfields up
+        let myScreenRect: CGRect = UIScreen.main.bounds
+        let keyboardHeight : CGFloat = 300
+        
+        UIView.beginAnimations( "animateView", context: nil)
+        //        var movementDuration:TimeInterval = 0.35
+        var needToMove: CGFloat = 0
+        
+        var frame : CGRect = self.view.frame
+        if (textField.frame.origin.y + textField.frame.size.height + UIApplication.shared.statusBarFrame.size.height > (myScreenRect.size.height - keyboardHeight - 30)) {
+            needToMove = (textField.frame.origin.y + textField.frame.size.height + UIApplication.shared.statusBarFrame.size.height) - (myScreenRect.size.height - keyboardHeight - 30);
+        }
+        
+        frame.origin.y = -needToMove
+        self.view.frame = frame
+        UIView.commitAnimations()
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //move textfields back down
+        UIView.beginAnimations( "animateView", context: nil)
+        //        var movementDuration:TimeInterval = 0.35
+        var frame : CGRect = self.view.frame
+        frame.origin.y = 0
+        self.view.frame = frame
+        UIView.commitAnimations()
+    }
+}

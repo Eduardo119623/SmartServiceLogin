@@ -148,13 +148,44 @@
                     <view key="view" contentMode="scaleToFill" id="cAE-J2-g6r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qDU-vA-ID7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="755.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqC-WS-JF7">
+                                <rect key="frame" x="0.0" y="799.5" width="414" height="62.5"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Salir">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="outAction:" destination="yIJ-LV-63L" eventType="touchUpInside" id="L3z-Gz-8OO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HqC-WS-JF7" firstAttribute="centerX" secondItem="vA7-lT-KNo" secondAttribute="centerX" id="0u7-qZ-O27"/>
+                            <constraint firstItem="HqC-WS-JF7" firstAttribute="width" secondItem="cAE-J2-g6r" secondAttribute="width" id="8Yw-2x-i3w"/>
+                            <constraint firstItem="vA7-lT-KNo" firstAttribute="bottom" secondItem="HqC-WS-JF7" secondAttribute="bottom" id="dXb-cB-Snz"/>
+                            <constraint firstItem="HqC-WS-JF7" firstAttribute="height" secondItem="cAE-J2-g6r" secondAttribute="height" multiplier="0.07" id="jhu-lw-zbQ"/>
+                            <constraint firstItem="qDU-vA-ID7" firstAttribute="top" secondItem="vA7-lT-KNo" secondAttribute="top" id="kyJ-ym-6CK"/>
+                            <constraint firstItem="qDU-vA-ID7" firstAttribute="width" secondItem="cAE-J2-g6r" secondAttribute="width" id="m14-7g-A8d"/>
+                            <constraint firstItem="HqC-WS-JF7" firstAttribute="top" secondItem="qDU-vA-ID7" secondAttribute="bottom" id="vZw-Q0-wRz"/>
+                            <constraint firstItem="qDU-vA-ID7" firstAttribute="centerX" secondItem="vA7-lT-KNo" secondAttribute="centerX" id="wIe-ng-7Nq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vA7-lT-KNo"/>
                     </view>
+                    <connections>
+                        <outlet property="exitAction" destination="HqC-WS-JF7" id="PED-1F-dJc"/>
+                        <outlet property="usersTableView" destination="qDU-vA-ID7" id="e2u-5v-9IB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrZ-Jd-nmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="162"/>
+            <point key="canvasLocation" x="1028" y="816"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zdo-b8-ODr">

@@ -28,8 +28,9 @@ class LoginPresenter: PresenterProtocol {
     }
     func getUsers(
         UsersModels: Array<UserModel>) {
-        (self.wireframe as! LoginWireFrame).goToUserView(UsersModels: UsersModels)
         
+        (self.wireframe as! LoginWireFrame).goToUserView(UsersModels: UsersModels)
+         (self.view as! SmartViewController).removeLoader()
     }
     
 }

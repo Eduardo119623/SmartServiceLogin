@@ -65,7 +65,7 @@ extension String {
 extension UIImageView {
     func imageFromUrl(_ urlString: String?, force: Bool = false, placeholder: UIImage? = nil, key: Int = 0, completion: (() -> ())? = nil) {
         self.tag = key
-        self.image = placeholder ?? #imageLiteral(resourceName: "imagePlaceholder")
+        self.image = placeholder ?? #imageLiteral(resourceName: "userImagePlaceholder")
         
         guard let urlStringRemplace = urlString?.replacingOccurrences(of: " ", with: ""), let urlRemplace = URL(string: urlStringRemplace) else {
             return

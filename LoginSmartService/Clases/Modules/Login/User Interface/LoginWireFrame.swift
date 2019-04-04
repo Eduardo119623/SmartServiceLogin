@@ -29,7 +29,8 @@ class LoginWireFrame: WireFrameProtocol {
             break
         case .User:
             self.view = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
-    (   self.view as! UserViewController).usersModels = UsersModels
+            (self.view as! UserViewController).usersModels = UsersModels
+           
             break
         }
        
@@ -46,6 +47,6 @@ class LoginWireFrame: WireFrameProtocol {
     }
     
     func goToUserView(UsersModels: Array<UserModel>) {
-        //LoginWireFrame(option: .User,UsersModels: UsersModels).pushViewController(navigationController: (self.view as! UIViewController).navigationController)
+        LoginWireFrame(option: .User,UsersModels: UsersModels).pushViewController(navigationController: (self.view as! UIViewController).navigationController)
     }
 }
