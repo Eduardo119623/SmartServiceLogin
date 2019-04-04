@@ -11,3 +11,9 @@
 "UnreachableServer" = "Error interno, intente más tarde.";
 "ErrorData" = "Error interno, intente más tarde.";
 "ErrorUploadImage" = "Error al subir foto, intente nuevamente.";
+"ErrorFormat" = "Formato invalido o vacio, intentalo de nuevo.";
+
+//LogInViewController
+"userTextFieldPlaceHolder" = "Ingresa nombre de Usuario.";
+"passwordTextFieldPlaceHolder" = "Ingresa Contrasena.";
+"logInButtonText" = "LogIn";

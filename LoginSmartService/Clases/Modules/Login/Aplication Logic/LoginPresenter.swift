@@ -26,6 +26,10 @@ class LoginPresenter: PresenterProtocol {
     func requesUsers() {
         (self.interactor as! LoginInteractor).requestUsers()
     }
-    
+    func getUsers(
+        UsersModels: Array<UserModel>) {
+        (self.wireframe as! LoginWireFrame).goToUserView(UsersModels: UsersModels)
+        
+    }
     
 }

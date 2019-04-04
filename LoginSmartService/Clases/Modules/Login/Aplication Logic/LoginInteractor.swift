@@ -11,8 +11,8 @@ import UIKit
 
 class LoginInteractor: InteractorProtocol {
     var presenter: PresenterProtocol?
-     var userDataStore: UserDataStore?
-    var userData: UserModel!
+    var userDataStore: UserDataStore?
+    var userModels: Array<UserModel>!
     func observerError(error: String) {
         
         print(error)
@@ -24,9 +24,15 @@ class LoginInteractor: InteractorProtocol {
      UserDataStore().requestUsers(correctAnswer: self.obtainUsers(data:), errorAnswer: self.observerError(error:))
     }
     func obtainUsers(data: Dictionary<String,Any>) {
-        
-        print(data)
-        self.userData = UserModel(data: data)
+        self.userModels = Array()
+        if let dat = data["results"] as? Array<Dictionary<String, Any>>{
+            for value in dat {
+                self.userModels.append(UserModel(dic: value))
+            }
+            
+        }
+        (self.presenter as! LoginPresenter).getUsers(UsersModels: self.userModels)
+      
     }
     
     

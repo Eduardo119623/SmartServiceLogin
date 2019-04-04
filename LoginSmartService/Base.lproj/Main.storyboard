@@ -26,22 +26,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-us-GXj">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="K5G-us-GXj">
                                 <rect key="frame" x="41.5" y="312" width="331" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="K5G-us-GXj" secondAttribute="height" multiplier="8:1" id="Heb-dk-OgY"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isStyleSingleLine" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-XH-WPu">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-XH-WPu">
                                 <rect key="frame" x="41.5" y="368" width="331" height="41.5"/>
-                                <color key="textColor" red="0.72941176470000002" green="0.76862745099999996" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isStyleSingleLine" value="NO"/>
@@ -49,11 +49,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-gA-EfK">
                                 <rect key="frame" x="41.5" y="456.5" width="331" height="48.5"/>
-                                <color key="backgroundColor" red="0.27450980390000002" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2ze-gA-EfK" secondAttribute="height" multiplier="300:44" id="oNs-et-qR7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="LibreFranklin-Bold" family="Libre Franklin" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="LibreFranklin-Bold" family="Libre Franklin" pointSize="24"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -131,10 +131,30 @@
                         <viewLayoutGuide key="safeArea" id="eLo-Lh-7GD"/>
                     </view>
                     <navigationItem key="navigationItem" id="Emz-GX-F3i"/>
+                    <connections>
+                        <outlet property="logInButton" destination="2ze-gA-EfK" id="Z2W-DL-M7z"/>
+                        <outlet property="passwordTextField" destination="8bi-XH-WPu" id="nQ8-ph-BLi"/>
+                        <outlet property="userTextField" destination="K5G-us-GXj" id="6WS-tc-Wam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="cL0-U2-WpU">
+            <objects>
+                <viewController storyboardIdentifier="UserViewController" id="yIJ-LV-63L" customClass="UserViewController" customModule="LoginSmartService" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cAE-J2-g6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vA7-lT-KNo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrZ-Jd-nmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zdo-b8-ODr">

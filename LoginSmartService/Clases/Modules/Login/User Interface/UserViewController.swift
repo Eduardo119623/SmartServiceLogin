@@ -14,7 +14,7 @@ class UserViewController: SmartViewController, ViewProtocol {
     var presenter: PresenterProtocol?
     
     //MARK: - Local Variables
-    
+    var usersModels: Array<UserModel>!
     
     // MARK: - IBOutlets
     

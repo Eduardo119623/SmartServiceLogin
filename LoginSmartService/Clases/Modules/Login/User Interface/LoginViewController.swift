@@ -13,15 +13,27 @@ class LoginViewController: SmartViewController, ViewProtocol {
     var presenter: PresenterProtocol?
     
      //MARK: - Local Variables
-    
+    var usersModels: Array<UserModel>!
 
      // MARK: - IBOutlets
+    @IBOutlet weak var userTextField: UITextField!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var logInButton: UIButton!
     
     // ACTION: - IBOutles
     
     @IBAction func logiinAction(_ sender: UIButton) {
-        (self.presenter as! LoginPresenter).requesUsers()
+        if !(self.passwordTextField.text!.isEmpty) && !(self.userTextField.text!.isEmpty) && (self.passwordTextField.text?.validatePasswordFormat())! && (self.userTextField.text?.validateUserNameFormat())! {
+            self.showLoader()
+            (self.presenter as! LoginPresenter).requesUsers()
+        } else {
+            let Alert: UIAlertController = UIAlertController(title: "Error", message: NSLocalizedString("ErrorFormat", comment: "ErrorFormat"), preferredStyle: .alert)
+            Alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
+            self.present(Alert, animated: true, completion: nil)
+        }
+       
     }
     
     // MARK: - Life Cycle
@@ -32,7 +44,9 @@ class LoginViewController: SmartViewController, ViewProtocol {
         // Do any additional setup after loading the view, typically from a nib.
     }
     func initView() {
-        
+        self.userTextField.placeholder = NSLocalizedString("userTextFieldPlaceHolder", comment: "userTextFieldPlaceHolder")
+        self.passwordTextField.placeholder = NSLocalizedString("passwordTextFieldPlaceHolder", comment: "passwordTextFieldPlaceholder")
+        self.logInButton.setTitle(NSLocalizedString("logInButtonText", comment:"logInButtonTextß"), for: .normal)
     }
    
     func initModule() {

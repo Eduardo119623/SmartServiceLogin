@@ -25,26 +25,13 @@ class UserModel: NSObject {
     var nat: String!
     var picture: String!
     
-    init(data: Dictionary<String, Any>) {
-        if let dat = data["results"] as? Array<Dictionary<String, Any>>, let dic = dat.first {
-                self.gender = dic["gender"] as? String ?? ""
-                if let name = dic["name"] as? Dictionary<String,String> {
-                    self.name = ""
-                    self.title = ""
-                    self.last = ""
-                    self.first = ""
-                    for (key,value) in name {
-                        if key == "title" {
-                            title = value
-                        }
-                        if key == "first" {
-                            first = value
-                        }
-                        if key == "last" {
-                            last = value
-                        }
-                        self.name = title + " " + first + " " + last
-                    }
+    init(dic: Dictionary<String, Any>) {
+            self.gender = dic["gender"] as? String ?? ""
+            if let name = dic["name"] as? Dictionary<String,Any> {
+                    self.title = name["name"] as? String ?? ""
+                    self.last = name["name"] as? String ?? ""
+                    self.first = name["name"] as? String ?? ""
+                    self.name = title + " " + first + " " + last
                 }
             if let location = dic["location"] as? Dictionary<String,Any> {
                 self.city = location["city"] as? String ?? ""
@@ -66,7 +53,7 @@ class UserModel: NSObject {
         }
        
         
-    }
+    
     
     
 }
