@@ -10,6 +10,8 @@ target 'LoginSmartService' do
   pod 'SDWebImage'
   pod 'NVActivityIndicatorView'
   pod 'ReachabilitySwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
   
   target 'LoginSmartServiceTests' do
     inherit! :search_paths

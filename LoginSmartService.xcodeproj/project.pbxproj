@@ -34,6 +34,7 @@
 		C39B5F732254A6A5008C4DBE /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F722254A6A5008C4DBE /* UserDataStore.swift */; };
 		C39B5F752254AE1E008C4DBE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F742254AE1E008C4DBE /* CardView.swift */; };
 		C39B5F772254CF2D008C4DBE /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B5F762254CF2D008C4DBE /* UserModel.swift */; };
+		C3AAD4C12256DEE00041BDBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3AAD4C02256DEE00041BDBF /* GoogleService-Info.plist */; };
 		C3EEDEBD22544BBE0065BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3EEDEBC22544BBE0065BA75 /* Localizable.strings */; };
 		C3EEDEC122544C270065BA75 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EEDEC022544C270065BA75 /* Services.plist */; };
 		EFD0708F4B72711BFF67263C /* Pods_LoginSmartServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EF7ED80B9BA8A1D22FEE4E /* Pods_LoginSmartServiceTests.framework */; };
@@ -95,6 +96,8 @@
 		C39B5F722254A6A5008C4DBE /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		C39B5F742254AE1E008C4DBE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../../Downloads/WOP_iOS-Develop/wop/General/PoliCustomControllers/CardView.swift"; sourceTree = "<group>"; };
 		C39B5F762254CF2D008C4DBE /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C3AAD4BF2256D9EA0041BDBF /* LoginSmartService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginSmartService.entitlements; sourceTree = "<group>"; };
+		C3AAD4C02256DEE00041BDBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3EEDEBC22544BBE0065BA75 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C3EEDEC022544C270065BA75 /* Services.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
 		E3DD81B9B74AB770F2CACA1C /* Pods_LoginSmartServiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSmartServiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +157,7 @@
 		191225B3225401190016581F /* LoginSmartService */ = {
 			isa = PBXGroup;
 			children = (
+				C3AAD4BF2256D9EA0041BDBF /* LoginSmartService.entitlements */,
 				C39B5F6D2254A629008C4DBE /* Alert */,
 				C39B5F6622549A68008C4DBE /* Cells */,
 				C3EEDEBF22544C040065BA75 /* Supporting Files */,
@@ -166,6 +170,7 @@
 				C39B5F5522547DE5008C4DBE /* Constants.swift */,
 				C39B5F742254AE1E008C4DBE /* CardView.swift */,
 				C39B5F6B22549BF7008C4DBE /* ServiceManager.swift */,
+				C3AAD4C02256DEE00041BDBF /* GoogleService-Info.plist */,
 				191225C0225401210016581F /* Info.plist */,
 				C3EEDEBC22544BBE0065BA75 /* Localizable.strings */,
 				C39B5F4B2254792E008C4DBE /* Clases */,
@@ -386,6 +391,11 @@
 				TargetAttributes = {
 					191225B0225401190016581F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					191225C4225401220016581F = {
 						CreatedOnToolsVersion = 10.1;
@@ -424,6 +434,7 @@
 			files = (
 				191225BF225401210016581F /* LaunchScreen.storyboard in Resources */,
 				C3EEDEBD22544BBE0065BA75 /* Localizable.strings in Resources */,
+				C3AAD4C12256DEE00041BDBF /* GoogleService-Info.plist in Resources */,
 				C39B5F712254A654008C4DBE /* SnackBar.xib in Resources */,
 				191225BC225401210016581F /* Assets.xcassets in Resources */,
 				C39B5F6A22549AA0008C4DBE /* UserTableViewCell.xib in Resources */,
@@ -504,18 +515,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LoginSmartService/Pods-LoginSmartService-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -743,7 +760,9 @@
 			baseConfigurationReference = 1C02C05269D64BCA1B0DB911 /* Pods-LoginSmartService.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginSmartService/LoginSmartService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VGN36XT55;
 				INFOPLIST_FILE = LoginSmartService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -761,7 +780,9 @@
 			baseConfigurationReference = A4FB5239D90A88EAB5EA5924 /* Pods-LoginSmartService.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LoginSmartService/LoginSmartService.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3VGN36XT55;
 				INFOPLIST_FILE = LoginSmartService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
