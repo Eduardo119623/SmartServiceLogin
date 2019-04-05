@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mukta-Bold.ttf">
+            <string>Mukta-Bold</string>
+        </array>
+        <array key="Mukta-Regular.ttf">
+            <string>Mukta-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SnackBar" customModule="wop" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="jtI-wY-5nY" id="dHp-hL-Sc4"/>
+                <outlet property="backgroundView" destination="ciY-5C-CvQ" id="2IJ-6E-ZxV"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="qzn-WX-aCZ"/>
+                <outlet property="textLabel" destination="LC4-bV-NBc" id="rsF-xZ-cYl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="627" height="121"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciY-5C-CvQ" customClass="CardView" customModule="wop" customModuleProvider="target">
+                    <rect key="frame" x="31.5" y="18" width="564" height="85"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCz-lM-9cm">
+                            <rect key="frame" x="27.5" y="-0.5" width="508" height="85"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC4-bV-NBc">
+                                    <rect key="frame" x="0.0" y="33" width="452" height="20"/>
+                                    <fontDescription key="fontDescription" name="Mukta-Regular" family="Mukta" pointSize="12"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-wY-5nY">
+                                    <rect key="frame" x="452" y="0.0" width="56" height="85"/>
+                                    <fontDescription key="fontDescription" name="Mukta-Bold" family="Mukta" pointSize="15"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.41176470590000003" green="0.1764705882" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="zDv-TU-BgQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="jtI-wY-5nY" firstAttribute="leading" secondItem="LC4-bV-NBc" secondAttribute="trailing" priority="751" id="3Oc-r2-C6S"/>
+                                <constraint firstAttribute="trailing" secondItem="jtI-wY-5nY" secondAttribute="trailing" id="6IY-ZS-OFw"/>
+                                <constraint firstItem="LC4-bV-NBc" firstAttribute="centerY" secondItem="XCz-lM-9cm" secondAttribute="centerY" id="TTt-lx-vR6"/>
+                                <constraint firstAttribute="trailing" secondItem="LC4-bV-NBc" secondAttribute="trailing" priority="750" id="g5v-8N-iNQ"/>
+                                <constraint firstItem="jtI-wY-5nY" firstAttribute="centerY" secondItem="XCz-lM-9cm" secondAttribute="centerY" id="mDg-36-dVk"/>
+                                <constraint firstItem="LC4-bV-NBc" firstAttribute="leading" secondItem="XCz-lM-9cm" secondAttribute="leading" id="ptk-jV-pLw"/>
+                                <constraint firstItem="jtI-wY-5nY" firstAttribute="height" secondItem="XCz-lM-9cm" secondAttribute="height" id="tan-BR-lp3"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="XCz-lM-9cm" firstAttribute="centerX" secondItem="ciY-5C-CvQ" secondAttribute="centerX" id="1t5-B3-crq"/>
+                        <constraint firstItem="XCz-lM-9cm" firstAttribute="width" secondItem="ciY-5C-CvQ" secondAttribute="width" multiplier="0.9" id="91B-Mz-jdQ"/>
+                        <constraint firstItem="XCz-lM-9cm" firstAttribute="centerY" secondItem="ciY-5C-CvQ" secondAttribute="centerY" id="HzM-yr-jIA"/>
+                        <constraint firstItem="XCz-lM-9cm" firstAttribute="height" secondItem="ciY-5C-CvQ" secondAttribute="height" id="Qt8-RE-ipM"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="widthShadowOffset">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="heightShadowOffset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ciY-5C-CvQ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="1OR-LK-81K"/>
+                <constraint firstItem="ciY-5C-CvQ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Ets-IE-DtP"/>
+                <constraint firstItem="ciY-5C-CvQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="gzq-xn-chu"/>
+                <constraint firstItem="ciY-5C-CvQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="jri-UJ-GKq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="243.5" y="-38.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WOPLoader" customModule="wop" customModuleProvider="target">
+            <connections>
+                <outlet property="background" destination="Aa8-xX-vZc" id="DmH-05-9cV"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="bUQ-CV-9VA"/>
+                <outlet property="imageLoader" destination="RRq-2B-6yy" id="WTZ-YH-TYe"/>
+                <outlet property="loader" destination="4OU-Dr-LlE" id="GkT-JB-4Kv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa8-xX-vZc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedAddPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="RRq-2B-6yy">
+                            <rect key="frame" x="166" y="312" width="43.5" height="43.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="RRq-2B-6yy" secondAttribute="height" multiplier="1:1" id="oof-JO-xug"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4OU-Dr-LlE" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                            <rect key="frame" x="150" y="296" width="75" height="75"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="4OU-Dr-LlE" secondAttribute="height" multiplier="1:1" id="iFJ-Ka-7Nv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="4OU-Dr-LlE" firstAttribute="width" secondItem="Aa8-xX-vZc" secondAttribute="width" multiplier="0.2" id="Cqh-is-2z9"/>
+                        <constraint firstItem="4OU-Dr-LlE" firstAttribute="centerX" secondItem="Aa8-xX-vZc" secondAttribute="centerX" id="guD-iQ-o41"/>
+                        <constraint firstItem="RRq-2B-6yy" firstAttribute="centerY" secondItem="4OU-Dr-LlE" secondAttribute="centerY" id="ilV-7p-KaJ"/>
+                        <constraint firstItem="RRq-2B-6yy" firstAttribute="width" secondItem="4OU-Dr-LlE" secondAttribute="width" multiplier="0.58" id="jL7-8U-gcI"/>
+                        <constraint firstItem="RRq-2B-6yy" firstAttribute="centerX" secondItem="4OU-Dr-LlE" secondAttribute="centerX" id="prD-tA-ExF"/>
+                        <constraint firstItem="4OU-Dr-LlE" firstAttribute="centerY" secondItem="Aa8-xX-vZc" secondAttribute="centerY" id="tbN-sG-2bJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Aa8-xX-vZc" secondAttribute="trailing" id="5U4-ID-4KU"/>
+                <constraint firstItem="Aa8-xX-vZc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hGw-qP-uh3"/>
+                <constraint firstItem="Aa8-xX-vZc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qPs-qa-nxV"/>
+                <constraint firstAttribute="bottom" secondItem="Aa8-xX-vZc" secondAttribute="bottom" id="yfZ-zV-t2F"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="feedAddPhoto" width="44" height="37"/>
+    </resources>
+</document>

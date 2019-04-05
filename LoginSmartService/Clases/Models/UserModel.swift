@@ -24,6 +24,7 @@ class UserModel: NSObject {
     var tel: String!
     var nat: String!
     var picture: String!
+    var password: String!
     
     init(dic: Dictionary<String, Any>) {
             self.gender = dic["gender"] as? String ?? ""
@@ -41,6 +42,7 @@ class UserModel: NSObject {
             self.email = dic["email"] as? String ?? ""
             if let login = dic["login"] as? Dictionary<String,Any>{
                 self.username = login["username"] as? String ?? ""
+                self.password = login["password"] as? String ?? ""
             }
             self.tel = dic["phone"] as? String ?? ""
             if let dob = dic["dob"] as? Dictionary<String,Any>{

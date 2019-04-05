@@ -25,13 +25,15 @@ class LoginViewController: SmartViewController, ViewProtocol {
     // ACTION: - IBOutles
     
     @IBAction func logiinAction(_ sender: UIButton) {
-        if !(self.passwordTextField.text!.isEmpty) && !(self.userTextField.text!.isEmpty) && (self.passwordTextField.text?.validatePasswordFormat())! && (self.userTextField.text?.validateUserNameFormat())! {
-            self.showLoader()
+       self.passwordTextField.text =  self.passwordTextField.text?.replacingOccurrences(of: " ", with: "")
+        self.userTextField.text = self.userTextField.text?.replacingOccurrences(of: " ", with: "")
+        if !(self.passwordTextField.text!.isEmpty) && !(self.userTextField.text!.isEmpty) && self.passwordTextField.text == usersModels.first?.password && (self.userTextField.text == usersModels.first?.username || self.userTextField.text == usersModels.first?.email) {
+            self.view.endEditing(true)
+           (self.presenter as! LoginPresenter).showUser(users: self.usersModels)
             self.userTextField.text = ""
             self.passwordTextField.text = ""
-            self.view.endEditing(true)
-            (self.presenter as! LoginPresenter).requesUsers()
         } else {
+         
             let Alert: UIAlertController = UIAlertController(title: "Error", message: NSLocalizedString("ErrorFormat", comment: "ErrorFormat"), preferredStyle: .alert)
             Alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
             self.present(Alert, animated: true, completion: nil)
@@ -43,7 +45,8 @@ class LoginViewController: SmartViewController, ViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initModule()
-        self.initView()
+        self.showLoader()
+        (self.presenter as! LoginPresenter).requesUsers()
         // Do any additional setup after loading the view, typically from a nib.
     }
     func initView() {
