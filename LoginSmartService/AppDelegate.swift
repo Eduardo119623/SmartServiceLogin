@@ -42,17 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange(_:)), name: , coder: nil)
         
     }
-    @objc func batteryLevelDidChange(_ notification: Notification){
-        
-    
-    }
+   
     @objc func getBatteryLevel(){
-        var battery: Float {
-            return UIDevice.current.batteryLevel
-        }
-        self.batteryLevel = battery
+        let battery = UIDevice.current.batteryLevel
+           
+        self.batteryLevel = battery * 100
         ref = Database.database().reference()
-        self.ref.child("users").child("0TAvz2boAmhcIsN6JhsZ").setValue(["user":self.batteryLevel])
+        self.ref.child("system").childByAutoId().setValue(self.batteryLevel)
         print(battery)
     }
     func applicationWillEnterForeground(_ application: UIApplication) {

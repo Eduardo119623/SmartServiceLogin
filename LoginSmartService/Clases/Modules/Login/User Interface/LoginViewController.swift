@@ -22,6 +22,7 @@ class LoginViewController: SmartViewController, ViewProtocol {
     
     @IBOutlet weak var logInButton: UIButton!
     
+    @IBOutlet weak var imageUser: UIImageView!
     // ACTION: - IBOutles
     
     @IBAction func logiinAction(_ sender: UIButton) {

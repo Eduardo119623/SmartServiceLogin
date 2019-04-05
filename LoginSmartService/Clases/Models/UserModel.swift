@@ -50,7 +50,7 @@ class UserModel: NSObject {
             }
             self.nat = dic["nat"] as? String ?? ""
             if let picture = dic["picture"] as? Dictionary<String,Any>{
-                self.picture = picture["medium"] as? String ?? ""
+                self.picture = picture["large"] as? String ?? ""
             }
         }
        
